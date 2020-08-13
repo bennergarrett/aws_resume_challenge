@@ -21,28 +21,27 @@
 
 <body class="">
     <!-- margin top of 4 -->
-    <div class="container mt-4">
-        <div class='row row-cols-md-2'>
+    <div class="container mt-8">
+        <div class='row row-cols-md-1 rows-cols-sm-1'>
 
-            <div class='col-12 col-lg-4 fixed-top mt-4 d-none d-lg-block' id="leftNav">
+            <div class='leftNav col-12 col-lg-3 fixed-top mt-4 mb-0 d-none d-lg-block' id="leftNav">
                 <div class="container header">
-                    <div class="card mb-4">
-                        <div class='media mb-0'>
+                    <div class="card mb-4 rounded">
+                        <div class='media mb-0 '>
                             <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
                             <!-- w-100 full width -->
-                            <img src="/static/images/IMG_0146.JPG" alt="image not found" class="w-100">
+                            <img src="/static/images/IMG_0146.JPG" alt="image not found" class="w-100 rounded">
                        </div>
 
                     </div>
 
-                    <div class="list-group scrollButtons">
-                        <button type="button" onClick="document.getElementById('aboutMe').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">About Me</button>
-                        <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">Experience</button>
-                        <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">Education</button>
-                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">Projects</button>
-                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">Skills</button>
-                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="list-group-item list-group-item-action" data-toggle="list">Certifications</button>
-                        <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="list-group-item list-group-item-action disabled" data-toggle="list">Blog</button>
+                    <div class="card list-group scrollButtons">
+                        <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Experience</button>
+                        <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Education</button>
+                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Projects</button>
+                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Skills</button>
+                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md list-group-item-action" data-toggle="list">Certifications</button>
+                        <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="btn btn-md  list-group-item-action disabled" disabled data-toggle="list">Blog</button>
                     </div>
 
                     
@@ -56,35 +55,17 @@
                             </li>
                         </ul>
 
-
                     </div>
-                    <footer class="card mb-4">
-                        <h2 class=" visits footer card-header text-center">0 visits so far!</h2>
+
+                    <footer class="myFooter card mb-0">
+                        <p class=" visits footer card-header text-center">0 visits so far!</p>
                     </footer>
                 </div>
                 
             </div>
 
 
-            <div class='col-lg-8 offset-lg-4 ' id="rightContent">
-    
-                <div class='aboutMe' id="aboutMe">
-                    <div class='card mb-4 h-100'>
-                        <h2 class='card-header text-center'>Garrett Benner </h2>
-                        <div class='card-body'>
-                            <p class='card-text lead'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Alias assumenda hic cupiditate voluptates asperiores necessitatibus odit laboriosam rem quaerat eos non quasi itaque reprehenderit magni, doloribus qui cum perspiciatis commodi!</p>
-                            <p class='card-text'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nemo id fugiat maiores voluptatibus officia hic ipsum, autem, laboriosam, delectus nulla ab totam sequi vel quae molestiae ipsa harum quo ratione.</p>
-                            <!-- text center, width is 75% -->
-                            <!-- center horizontally mx-auto-->
-                            <blockquote class='blockquote text-center w-75 mx-auto'>
-                                <!-- move to bottom of margin with mb-0 -->
-                                <p class='mb-0'>"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ullam id beatae odio suscipit, nesciunt quibusdam ipsa rerum quas ab numquam possimus iusto! Quod a ipsa alias recusandae, ad reprehenderit impedit?"</p>
-                                <footer class='footer'>-Garrett Benner</footer>
-                            </blockquote>
-                            <p class="card-text">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Reprehenderit soluta, enim dolores assumenda dignissimos vel non! Distinctio voluptates consequuntur, quaerat quas quis fuga voluptas illum cumque? Quam quos delectus non.</p>
-                        </div>
-                    </div>
-                </div>
+            <div class='col-lg-9 offset-lg-3 mt-4' id="rightContent">
                 
                 <div class='experience' id='experience'>
                     <div class="card mb-4">
@@ -270,6 +251,9 @@
                                             <div class="align-items-start">
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Python</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">C++</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">Javascript</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">HTML</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">CSS</p></li>
                                             </div>
                                         </div>
 

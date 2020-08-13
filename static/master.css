@@ -1,10 +1,31 @@
+/* body{
+    background-color: #F1FAEE;
+
+} */
+/* .card{
+    background-color:#2EC4B6 ;
+}
+
+.card-body{
+    background-color: #CBF3F0;
+} */
+
 .visits{
+    bottom: 0;
+}
+.myfooter{
     bottom: 0;
 }
 
 #rightContent{
     min-height: 100vh;
 
+}
+
+#leftnav{
+    max-height: 100%;
+    bottom: 0;
+    /* background-color: #FF9F1C; */
 }
 /* 
 .aboutMe{
