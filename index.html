@@ -6,17 +6,25 @@
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
-    <!-- friconix vector art -->
-    <script defer src="https://friconix.com/cdn/friconix.js"> </script>
+    <!-- https://fontawesome.com/v4.7.0/icons/ -->
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+   
+
+
+    <!-- my css -->
+    <link rel="stylesheet" href="/static/master.css">
+
+    
 
     <title>Resume</title>
 </head>
-<body>
+
+<body class="">
     <!-- margin top of 4 -->
     <div class="container mt-4">
         <div class='row row-cols-md-2'>
 
-            <div class='col-12 col-lg-4 fixed-top mt-4' id="leftNav">
+            <div class='col-12 col-lg-4 fixed-top mt-4 d-none d-lg-block' id="leftNav">
                 <div class="container header">
                     <div class="card mb-4">
                         <div class='media mb-0'>
@@ -27,45 +35,40 @@
 
                     </div>
 
-                    <div class="list-group">
-                        <button type="button" class="list-group-item list-group-item-action active">About Me</button>
-                        <button type="button" class="list-group-item list-group-item-action">Experience</button>
-                        <button type="button" class="list-group-item list-group-item-action">Education</button>
-                        <button type="button" class="list-group-item list-group-item-action">Projects</button>
-                        <button type="button" class="list-group-item list-group-item-action">Certifications</button>
-                        </div>
+                    <div class="list-group scrollButtons">
+                        <button type="button" onClick="document.getElementById('aboutMe').scrollIntoView();" class="list-group-item list-group-item-action">About Me</button>
+                        <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="list-group-item list-group-item-action">Experience</button>
+                        <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="list-group-item list-group-item-action">Education</button>
+                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="list-group-item list-group-item-action">Projects</button>
+                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="list-group-item list-group-item-action">Skills</button>
+                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="list-group-item list-group-item-action">Certifications</button>
+                        <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="list-group-item list-group-item-action">Blog</button>
+                    </div>
 
                     
-                    <div class='container mb-4'>
+                    <div class='container mb-0'>
                         <ul class="nav justify-content-center">
                             <li class="nav-item">
-                            <a class="nav-link active" href="#">Github</a>
+                                <a class="nav-link" href="https://github.com/bennergarrett"><i class="fa fa-github-square fa-4x"></i></a>
                             </li>
                             <li class="nav-item">
-                            <a class="nav-link" href="#">LinkedIn</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link" href="#">Link</a>
-                            </li>
-                            <li class="nav-item">
-                            <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                                <a class="nav-link" href="https://www.linkedin.com/in/bennergarrett/"><i class="fa fa-linkedin-square fa-4x" ></i></a>
                             </li>
                         </ul>
 
-                        <footer class="card mb-4">
-                            <h2 class="card-header text-center">0 Visits so far!</h2>
 
-                        </footer>
                     </div>
+                    <footer class="card mb-4">
+                        <h2 class=" visits footer card-header text-center">0 visits so far!</h2>
+                    </footer>
                 </div>
-
-
+                
             </div>
 
 
-            <div class='col-lg-8 offset-lg-4' id="rightContent">
+            <div class='col-lg-8 offset-lg-4 ' id="rightContent">
     
-                <div class='aboutMe'>
+                <div class='aboutMe' id="aboutMe">
                     <div class='card mb-4 h-100'>
                         <h2 class='card-header text-center'>Garrett Benner </h2>
                         <div class='card-body'>
@@ -83,13 +86,13 @@
                     </div>
                 </div>
                 
-                <div class='experience'>
+                <div class='experience' id='experience'>
                     <div class="card mb-4">
                         <h2 class="card-header text-center">Work Experience</h2>
                         <div class="card-body">
                             <div class='media mb-2'>
-                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
-                            
+                                <i class="fa fa-flask fa-4x text-primary mr-2"></i>
+
                                 <div class="media-body">
                                     <h3 class='h3 mb-1'>Assistant Lab Manager</h3>
                                     <!-- make flex container -->
@@ -108,8 +111,8 @@
                             <!-- horizontal row -->
                             <hr>
                             <div class='media mb-2'>
-                                <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
-                                
+                                <i class="fa fa-laptop fa-4x text-primary mr-2" ></i>
+
                                 <div class="media-body">
                                     <h3 class='h3 mb-1'>IT Support</h3>
                                     <!-- make flex container -->
@@ -135,13 +138,12 @@
                     </div>
                 </div>
 
-                <div class='Education'>
+                <div class='education' id="education">
                     <div class="card mb-4">
                         <h2 class="card-header text-center">Education</h2>
                         <div class="card-body">
                             <div class='media mb-2'>
-                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
-                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                <i class="fa fa-university fa-4x text-primary mr-2" ></i>
                                 
                                 <div class="media-body">
                                     <h3 class='h3 mb-1'>Bachelor in Electrical Engineering</h3>
@@ -160,18 +162,18 @@
                 </div>
 
 
-                <div class='projects'>
+                <div class='projects' id="projects">
                     <div class="card mb-4">
                         <h2 class="card-header text-center">Projects</h2>
                         <div class="card-body">
                             <div class='media mb-2'>
-                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
-                            
+                                 <i class="fa fa-amazon fa-4x text-primary mr-2" ></i>
+
                                 <div class="media-body">
                                     <h3 class='h3 mb-1'>AWS Cloud Resume Challenge</h3>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0"><a href="#0">Temple Engineering</a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2020-08">August 2020</time> &ndash; <time>current</time></small>
+                                        <h5 class="mb-0">Personal Project</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2020-08">August 2020</time> &ndash; <time>current</time></small>
                                     </div>
                                 </div>
                             </div>  
@@ -185,13 +187,12 @@
                             <!-- horizontal row -->
                             <hr>
                             <div class='media mb-2'>
-                                <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
-                                
+                                <i class="fa fa-cloud fa-4x text-primary mr-2" ></i>
                                 <div class="media-body">
-                                    <h3 class='h3 mb-1'>Cloud Computing Security Graduate Course</h3>
+                                    <h3 class='h3 mb-1'>AWS and Open Nebula Cloud Security</h3>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0"><a href="#0">Temple Engineering</a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2019-08">August 2019</time> &ndash; <time datetime="2019-2">December 2019</time></small>
+                                        <h5 class="mb-0">Cloud Computing Security Grad Course</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2019-08">August 2019</time> &ndash; <time datetime="2019-2">December 2019</time></small>
                                     </div>
                                 </div>
                             </div>
@@ -205,23 +206,130 @@
                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
                            <!-- horizontal row -->
                            <hr>
+
+                           <div class='media mb-2'>
+                                <i class="fa fa-users fa-4x text-primary mr-2"></i>
+                                <div class="media-body">
+                                    <h3 class='h3 mb-1'>Automated Agricultural Harvester</h3>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <h5 class="mb-0">Senior Design at Temple University</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="">
+                                <li class="">Worked with team of 5 to develop an automated mushroom harvester</li>
+                                <li class="">Trained neural network to detect mushrooms in a Coordinate System</li>
+                                <li class="">Implemented Git sourcing to ensure versioning control of software</li>
+                                <li class="">Created backup contour recognition with OpenCV Library in Python</li>
+                            </ul>
+
+                           <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                           <!-- horizontal row -->
+                            <hr>
+                            <div class="collapse" id="collapse-work">
+                                <div class='media mb-2'>
+                                        <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                        
+                                        <div class="media-body">
+                                            <h3 class='h3 mb-1'>Software Tools</h3>
+                                            <!-- make flex container -->
+                                            <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                                <h5 class="mb-0">Senior Design at Temple University</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="">
+                                        <li class="">Worked with team of 5 to develop an automated mushroom harvester</li>
+                                        <li class="">Trained neural network to detect mushrooms in a Coordinate System</li>
+                                        <li class="">Implemented Git sourcing to ensure versioning control of software</li>
+                                        <li class="">Created backup contour recognition with OpenCV Library in Python</li>
+                                    </ul>
+
+                                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                                <!-- horizontal row -->
+                                <hr>
+                            </div>
+                            <button type="button" class="btn btn-sm  btn-outline-primary" data-toggle="collapse" 
+                            data-target='#collapse-work' aria-expanded="false" aria-controls="collapse-work">Show All</button>
                         </div>
                     </div>
                 </div>
 
 
-                <div class='container skills'>
+                <div class='skills' id="skills">
+                    <div class="card mb-4">
+                        <h2 class="card-header text-center">Skills</h2>
+                        <div class="card-body">
+                            <div class='media mb-2'>
+                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
+                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                
+                                <div class="media-body">
+                                    <h3 class='h3 mb-1'>Coming Soon!</h3>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
+                                        
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                            
+                        </div>
+                    </div>
 
                 </div>
 
 
 
 
-                <div class='container certifications'>
-
+                <div class='certifications' id="certifications">
+                    <div class="card mb-4">
+                        <h2 class="card-header text-center">Certifications</h2>
+                        <div class="card-body">
+                            <div class='media mb-2'>
+                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
+                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                
+                                <div class="media-body">
+                                    <h3 class='h3 mb-1'>Coming Soon!</h3>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
+                                        
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                            
+                        </div>
+                    </div>
                 </div>
 
-                <div class='container Blog'>
+                <div class='blog' id="blog">
+                    <div class="card mb-4">
+                        <h2 class="card-header text-center">Blog</h2>
+                        <div class="card-body">
+                            <div class='media mb-2'>
+                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
+                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                
+                                <div class="media-body">
+                                    <h3 class='h3 mb-1'>Coming Soon!</h3>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
+                                        
+                                    </div>
+        
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                            
+                        </div>
 
                 </div>
             </div>
