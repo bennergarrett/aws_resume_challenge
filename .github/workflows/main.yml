@@ -17,6 +17,6 @@ jobs:
         aws-region: us-east-1
 #        SOURCE_DIR: 'public'      # optional: defaults to entire repository
     - name: Deploy static site to S3 bucket
-      run: aws s3 sync ./ s3://garrettbenner.com --delete --acl public-read --follow-symlinks --include "*" --exclude "*/.git*/*"
+      run: aws s3 sync ./ s3://garrettbenner.com --delete --acl public-read --follow-symlinks  --exclude ".git*/*"
     - name: invalidate cloudfront distribution
       run: aws cloudfront create-invalidation --distribution-id E3C02D5JRUJAO5 --paths "/*"
