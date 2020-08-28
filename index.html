@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=s, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- bootstrap css -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
 
@@ -21,8 +21,8 @@
 
 <body class="">
     <!-- margin top of 4 -->
-    <div class="container mt-8">
-        <div class='row row-cols-md-1 rows-cols-sm-1'>
+    <div class="container mt-8 mw-100">
+        <div class='row  rows-cols-sm-1'>
 
             <div class='leftNav col-12 col-lg-3 fixed-top mt-4 mb-0 d-none d-lg-block' id="leftNav">
                 <div class="container header">
@@ -30,17 +30,17 @@
                         <div class='media mb-0 '>
                             <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
                             <!-- w-100 full width -->
-                            <img src="/static/images/IMG_0146.JPG" alt="image not found" class="w-100 rounded">
+                            <img src="./static/images/IMG_0146.JPG" alt="image not found" class="w-100 rounded">
                        </div>
 
                     </div>
 
                     <div class="card list-group scrollButtons">
+                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Projects</button>
                         <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Experience</button>
                         <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Education</button>
-                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Projects</button>
-                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Skills</button>
-                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md list-group-item-action" data-toggle="list">Certifications</button>
+                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Certifications</button>
+                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md list-group-item-action" data-toggle="list">Skills</button>
                         <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="btn btn-md  list-group-item-action disabled" disabled data-toggle="list">Blog</button>
                     </div>
 
@@ -57,8 +57,11 @@
 
                     </div>
 
-                    <footer class="myFooter card mb-0">
-                        <p class=" visits footer card-header text-center">0 visits so far!</p>
+                    <footer class="footer card mb-0">
+                        <div class="d-sm-flex align-items-sm-baseline">
+                            <p class="card-body text-center header h3 " id="counter" >Visitors: 0</p>
+                            
+                        </div>
                     </footer>
                 </div>
                 
@@ -67,18 +70,115 @@
 
             <div class='col-lg-9 offset-lg-3 mt-4' id="rightContent">
                 
+                <div class='projects' id="projects">
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Projects</h4>
+                        <div class="card-body">
+                            <div class='media mb-2'>
+                                 <i class="fa fa-amazon fa-4x text-primary mr-2" ></i>
+
+                                <div class="media-body">
+                                    <h5 class='h3 mb-1'>AWS Cloud Resume Challenge</h5>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <h6 class="mb-0">Personal Project</h6> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2020-08">August 2020</time> &ndash; <time>current</time></small>
+                                    </div>
+                                </div>
+                            </div>  
+                            <ul class="">
+                                <li class="">Create S3 static website containing HTML & CSS styled resume</li>
+                                <li class="">Used CloudFront for web security & Route53 for DNS domain name</li>
+                                <li class="">Will show visit count and store value in DynamoDB using API Gateway and Lambda to communicate with DynamoDB and website</li>
+                                <li class="">Will perform unit testing for my infrastucture as code implementation</li>
+                            </ul>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                            <!-- horizontal row -->
+                            <hr>
+                            <div class='media mb-2'>
+                                <i class="fa fa-cloud fa-4x text-primary mr-2" ></i>
+                                <div class="media-body">
+                                    <h5 class='h3 mb-1'>AWS and Open Nebula Cloud Security</h5>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <h6 class="mb-0">Cloud Computing Security Grad Course <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2019-08">August 2019</time> &ndash; <time datetime="2019-2">December 2019</time></small></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="">
+                                <li class="">Used IAM policy to manage admin user access with MFA and group permissions</li>
+                                <li class="">Created Billing alarm to manage free account using CloudWatch</li>
+                                <li class="">Deployed a web server using EC2 linux instance</li>
+                                <li class="">Created Linux environment to host Open Nebula and created a KVM on a Raspberry Pi and laptop</li>
+                                <li class="">Practiced web security by penetration testing using Kali Linux on a KVM</li>
+                            </ul>
+
+                           <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                           <!-- horizontal row -->
+                           <hr>
+
+                           <div class='media mb-2'>
+                                <i class="fa fa-users fa-4x text-primary mr-2"></i>
+                                <div class="media-body">
+                                    <h5 class='h3 mb-1'>Automated Agricultural Harvester</h5>
+                                    <!-- make flex container -->
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <h6 class="mb-0">Senior Design at Temple University<small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small></h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <ul class="">
+                                <li class="">Worked with team of 5 to develop an automated mushroom harvester</li>
+                                <li class="">Trained neural network to detect mushrooms in a Coordinate System</li>
+                                <li class="">Implemented Git sourcing to ensure versioning control of software</li>
+                                <li class="">Created backup contour recognition with OpenCV Library in Python</li>
+                            </ul>
+
+                           <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                           <!-- horizontal row -->
+                            <hr>
+                            <div class="collapse" id="collapse-work">
+                                <div class='media mb-2'>
+                                        <i class="fa fa-file-code-o fa-4x text-primary mr-2" ></i>
+                                        <div class="media-body">
+                                            <h5 class='h3 mb-1'>Software Tools</h5>
+                                            <!-- make flex container -->
+                                            <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                                <h6 class="mb-0">Course at Temple University<small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small></h6>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <ul class="">
+                                        <li class="">Introduced to scripting, interpreted, and compiled languages</li>
+                                        <li class="">Programmed filters for big data with scripting in bash</li>
+                                        <li class="">Created program in C++ to read in names and store them in memory as a linked list </li>
+                                        <li class="">Wrote single Python script to take in variable input of files and output a historgram of the pattern word chosen</li>
+                                        <li class="">Created a class in Python that took in a song list and would play them in a randomized order, and would resume where it left off if the program stopped </li>
+                                    </ul>
+
+                                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                                <!-- horizontal row -->
+                                <hr>
+                            </div>
+                            <button type="button" class="btn btn-sm  btn-outline-primary" data-toggle="collapse" 
+                            data-target='#collapse-work' aria-expanded="false" aria-controls="collapse-work">Show All</button>
+                        </div>
+                    </div>
+                </div>
+
+
+
                 <div class='experience' id='experience'>
-                    <div class="card mb-4">
-                        <h2 class="card-header text-center">Work Experience</h2>
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Work Experience</h4>
                         <div class="card-body">
                             <div class='media mb-2'>
                                 <i class="fa fa-flask fa-4x text-primary mr-2"></i>
 
                                 <div class="media-body">
-                                    <h3 class='h3 mb-1'>Assistant Lab Manager</h3>
+                                    <h5 class='h3 mb-1'>Assistant Lab Manager</h5>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0"><a href="https://engineering.temple.edu">Temple University Engineering</a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-08">August 2018</time> &ndash; <time datetime="2020-2">February 2020</time></small>
+                                        <h6 class="mb-0"><a href="https://engineering.temple.edu">Temple University Engineering</a> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-08">August 2018</time> &ndash; <time datetime="2020-2">February 2020</time></small></h6>
                                     </div>
                                 </div>
                             </div>  
@@ -120,14 +220,14 @@
                 </div>
 
                 <div class='education' id="education">
-                    <div class="card mb-4">
-                        <h2 class="card-header text-center">Education</h2>
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Education</h4>
                         <div class="card-body">
                             <div class='media mb-2'>
                                 <i class="fa fa-university fa-4x text-primary mr-2" ></i>
                                 
                                 <div class="media-body">
-                                    <h3 class='h3 mb-1'>Bachelor in Electrical Engineering</h3>
+                                    <h5 class='h3 mb-1'>Bachelor in Electrical Engineering</h5>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
                                         <h5 class="mb-0"><a href="https://engineering.temple.edu">Temple University</a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small>
@@ -143,96 +243,26 @@
                 </div>
 
 
-                <div class='projects' id="projects">
-                    <div class="card mb-4">
-                        <h2 class="card-header text-center">Projects</h2>
+                <div class='certifications' id="certifications">
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Certifications</h4>
                         <div class="card-body">
                             <div class='media mb-2'>
-                                 <i class="fa fa-amazon fa-4x text-primary mr-2" ></i>
-
+                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
+                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                                
                                 <div class="media-body">
-                                    <h3 class='h3 mb-1'>AWS Cloud Resume Challenge</h3>
+                                    <h5 class='h3 mb-1 text-center'>Currently studying for AWS Certifications!</h5>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0">Personal Project</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2020-08">August 2020</time> &ndash; <time>current</time></small>
+                                        <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
+                                        
                                     </div>
+        
                                 </div>
-                            </div>  
-                            <ul class="">
-                                <li class="">Create S3 static website containing HTML & CSS styled resume</li>
-                                <li class="">Use CloudFront for web security & Route53 for DNS domain name</li>
-                                <li class="">Show visit count and store in DynamoDB using API Gateway and Lambda to communicate with DynamoDB and website</li>
-                                <li class="">Performed unit testing</li>
-                            </ul>
+                            </div>
                             <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
-                            <!-- horizontal row -->
-                            <hr>
-                            <div class='media mb-2'>
-                                <i class="fa fa-cloud fa-4x text-primary mr-2" ></i>
-                                <div class="media-body">
-                                    <h3 class='h3 mb-1'>AWS and Open Nebula Cloud Security</h3>
-                                    <!-- make flex container -->
-                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0">Cloud Computing Security Grad Course</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2019-08">August 2019</time> &ndash; <time datetime="2019-2">December 2019</time></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <ul class="">
-                                <li class="">Use IAM to manage admin user access with MFA and group permissions</li>
-                                <li class="">Created Billing alarm to manage free account using CloudWatch</li>
-                                <li class="">Created Linux environment to host Open Nebula and created a KVM on a Raspberry Pi and laptop</li>
-                                <li class="">Practiced web security by penetration testing using Kali Linux in a KVM</li>
-                            </ul>
-
-                           <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
-                           <!-- horizontal row -->
-                           <hr>
-
-                           <div class='media mb-2'>
-                                <i class="fa fa-users fa-4x text-primary mr-2"></i>
-                                <div class="media-body">
-                                    <h3 class='h3 mb-1'>Automated Agricultural Harvester</h3>
-                                    <!-- make flex container -->
-                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <h5 class="mb-0">Senior Design at Temple University</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small>
-                                    </div>
-                                </div>
-                            </div>
-                            <ul class="">
-                                <li class="">Worked with team of 5 to develop an automated mushroom harvester</li>
-                                <li class="">Trained neural network to detect mushrooms in a Coordinate System</li>
-                                <li class="">Implemented Git sourcing to ensure versioning control of software</li>
-                                <li class="">Created backup contour recognition with OpenCV Library in Python</li>
-                            </ul>
-
-                           <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
-                           <!-- horizontal row -->
-                            <hr>
-                            <div class="collapse" id="collapse-work">
-                                <div class='media mb-2'>
-                                        <i class="fa fa-file-code-o fa-4x text-primary mr-2" ></i>
-                                        <div class="media-body">
-                                            <h3 class='h3 mb-1'>Software Tools</h3>
-                                            <!-- make flex container -->
-                                            <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                                <h5 class="mb-0">Senior Design at Temple University</h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2018-01">January 2018</time> &ndash; <time datetime="2019-12">December 2019</time></small>
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <ul class="">
-                                        <li class="">Introduced to scripting, interpreted, and compiled languages</li>
-                                        <li class="">Programmed filters for big data with scripting in bash</li>
-                                        <li class="">Created program in C++ to read in names and store them in memory as a linked list </li>
-                                        <li class="">Wrote single Python script to take in variable input of files and output a historgram of the pattern word chosen</li>
-                                        <li class="">Created a class in Python that took in a song list and would play them in a randomized order, and would resume where it left off if the program stopped </li>
-                                    </ul>
-
-                                <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
-                                <!-- horizontal row -->
-                                <hr>
-                            </div>
-                            <button type="button" class="btn btn-sm  btn-outline-primary" data-toggle="collapse" 
-                            data-target='#collapse-work' aria-expanded="false" aria-controls="collapse-work">Show All</button>
+                            
                         </div>
                     </div>
                 </div>
@@ -240,14 +270,14 @@
 
                 <div class='skills' id="skills">
                     <div class="card mb-4">
-                        <h2 class="card-header text-center">Skills</h2>
+                        <h4 class="card-header text-center">Skills</h4>
                         <div class="card-body">
                             <div class='media mb-2'>
                                 <!-- can place image here -->
                                 
                                 <div class="media-body">
                                     <div class=" d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <div class="list-group col-md-4"><h4>Languages</h4>
+                                        <div class="list-group col-md-4"><h5>Languages</h5>
                                             <div class="align-items-start">
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Python</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">C++</p></li>
@@ -257,7 +287,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="list-group col-md-4"><h4>Software</h4>
+                                        <div class="list-group col-md-4"><h5>Software</h5>
                                             <div class="align-items-start">
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">MATLAB</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Multisim</p></li>
@@ -265,7 +295,7 @@
                                             </div>
                                         </div>
 
-                                        <div class="list-group col-md-4"><h4>Cloud</h4>
+                                        <div class="list-group col-md-4"><h5>Cloud</h5>
                                             <div class="align-items-start">
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">AWS</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Open Nebula</p></li>
@@ -289,40 +319,16 @@
 
 
 
-                <div class='certifications' id="certifications">
-                    <div class="card mb-4">
-                        <h2 class="card-header text-center">Certifications</h2>
-                        <div class="card-body">
-                            <div class='media mb-2'>
-                                <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
-                                 <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
-                                
-                                <div class="media-body">
-                                    <h3 class='h3 mb-1 text-center'>Currently studying for AWS Certifications!</h3>
-                                    <!-- make flex container -->
-                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
-                                        <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
-                                        
-                                    </div>
-        
-                                </div>
-                            </div>
-                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
-                            
-                        </div>
-                    </div>
-                </div>
-
                 <div class='blog d-none' id="blog">
-                    <div class="card mb-4">
-                        <h2 class="card-header text-center">Blog</h2>
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Blog</h4>
                         <div class="card-body">
                             <div class='media mb-2'>
                                 <!-- <i class="fi-xnsuxx-bank-solid mr-2 text-primary"></i> -->
                                  <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
                                 
                                 <div class="media-body">
-                                    <h3 class='h3 mb-1'>Coming Soon!</h3>
+                                    <h5 class='h3 mb-1'>Coming Soon!</h5>
                                     <!-- make flex container -->
                                     <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
                                         <!-- <h5 class="mb-0"><a href="#0"></a></h5> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small> -->
@@ -349,6 +355,8 @@
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
 
+    <!-- my script -->
+     <script src="/static/master.js"></script>
     
 </body>
 </html>
