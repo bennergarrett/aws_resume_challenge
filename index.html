@@ -35,20 +35,20 @@
 
                     </div>
 
-                    <div class="card list-group scrollButtons">
-                        <button type="button" onClick="document.getElementById('projects').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Projects</button>
-                        <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Experience</button>
-                        <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Education</button>
-                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md  list-group-item-action" data-toggle="list">Certifications</button>
-                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md list-group-item-action" data-toggle="list">Skills</button>
-                        <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="btn btn-md  list-group-item-action disabled" disabled data-toggle="list">Blog</button>
+                    <div class="list-group scrollButtons" id="list-tab" role="tablist">
+                        <button onClick="document.getElementById('projects').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action active" data-toggle="list" role="tab">Projects</button>
+                        <button type="button" onClick="document.getElementById('experience').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list" role="tab">Experience</button>
+                        <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list">Education</button>
+                        <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list">Certifications</button>
+                        <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md list-group-item list-group-item-action" data-toggle="list">Skills</button>
+                        <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action disabled" disabled data-toggle="list">Blog</button>
                     </div>
 
                     
                     <div class='container mb-0'>
                         <ul class="nav justify-content-center">
                             <li class="nav-item">
-                                <a class="nav-link" href="https://github.com/bennergarrett"><i class="fa fa-github-square fa-4x"></i></a>
+                                <a class="nav-link" href="https://github.com/bennergarrett"><i  class="fa fa-github-square fa-4x"></i></a>
                             </li>
                             <li class="nav-item">
                                 <a class="nav-link" href="https://www.linkedin.com/in/bennergarrett/"><i class="fa fa-linkedin-square fa-4x" ></i></a>
@@ -57,7 +57,7 @@
 
                     </div>
 
-                    <footer class="footer card mb-0">
+                    <footer class="footer mb-0">
                         <div class="d-sm-flex align-items-sm-baseline">
                             <p class="card-body text-center header h3 " id="counter" >Visitors: </p>
                             
@@ -67,6 +67,41 @@
                 
             </div>
 
+            <div class="alt-top mt-4 mb-0  d-lg-none offset-lg-3 container-fluid" id='alt-small-top'>
+                <div class="container header">
+                    <div class="card mb-4 rounded">
+                        <div class='media mb-0 '>
+                            <!-- <i class="fab fa-facebook fa-fw fa-3x text-primary mr-2"></i> -->
+                            <!-- w-100 full width -->
+                            <img src="./static/images/IMG_0146.JPG" alt="image not found" class="w-100 rounded">
+                       </div>
+
+                    </div>
+
+
+                    
+                    <div class='container mb-0'>
+                        <ul class="nav justify-content-center">
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://github.com/bennergarrett"><i  class="fa fa-github-square fa-4x"></i></a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="https://www.linkedin.com/in/bennergarrett/"><i class="fa fa-linkedin-square fa-4x" ></i></a>
+                            </li>
+                        </ul>
+
+                    </div>
+
+                    <footer class="footer mb-0">
+                        <div class="d-sm-flex align-items-sm-baseline">
+                            <p class="card-body text-center header h3 " id="counter2" >Visitors: </p>
+                            
+                        </div>
+                    </footer>
+                </div>
+                
+            </div>
+            </div>
 
             <div class='col-lg-9 offset-lg-3 mt-4' id="rightContent">
 

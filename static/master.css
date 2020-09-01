@@ -2,14 +2,21 @@
     background-color: #F1FAEE;
 
 } */
-/* .card{
+ /* .card{
     background-color:#2EC4B6 ;
-}
+} */
 
-.card-body{
+/*.card-body{
     background-color: #CBF3F0;
 } */
 
+.fa-github-square{
+    color: #495057;
+
+}
+.fa-github-square:hover{
+    color: black;
+}
 .visits{
     bottom: 0;
 }
@@ -17,16 +24,17 @@
     bottom: 0;
 }
 
-#rightContent{
+/* #rightContent{
     min-height: 100vh;
+    background-color: #457B9D;
 
 }
 
-#leftnav{
+#leftNav{
     max-height: 100%;
     bottom: 0;
-    /* background-color: #FF9F1C; */
-}
+    background-color: #E63946;
+} */
 /* 
 .aboutMe{
     min-height:50%;

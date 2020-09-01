@@ -9,8 +9,10 @@ function counter() {
     .then(() => {
       console.log(obj)
       let content = document.getElementById('counter');
+      let content2 = document.getElementById('counter2');
       let newString = document.createTextNode(obj)
       content.appendChild(newString); //loads onto page
+      content2.appendChild(newString); //loads onto page
 
 
     })
