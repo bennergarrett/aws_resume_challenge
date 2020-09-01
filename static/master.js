@@ -1,13 +1,20 @@
+
+
 function counter() {
-    let content = document.getElementById('counter');
-    let getPart = content.textContent.replace( /[^\d.]/g, '' ); // returns number
-    let num = parseInt(getPart); // gets rid of any unecessary parts
-    let newVal = num+1; // returns number+1
-    let reg = new RegExp(num); // create dynamic regexp
-    let newString = content.textContent.replace ( reg, newVal ); // returns original with new number
-    content.innerHTML =newString; //loads onto page
-    console.log(newString); //logs it as well on console
+  let obj;
+  
+  fetch('https://penx8v1wwj.execute-api.us-east-1.amazonaws.com/Production')
+    .then(res => res.json())
+    .then(data => obj = data)
+    .then(() => {
+      console.log(obj)
+      let content = document.getElementById('counter');
+      let newString = document.createTextNode(obj)
+      content.appendChild(newString); //loads onto page
+
+
+    })
+   
 }
 
-
-  window.onload = counter; //runs on window load
+window.onload = counter; //runs on window load

@@ -59,7 +59,7 @@
 
                     <footer class="footer card mb-0">
                         <div class="d-sm-flex align-items-sm-baseline">
-                            <p class="card-body text-center header h3 " id="counter" >Visitors: 0</p>
+                            <p class="card-body text-center header h3 " id="counter" >Visitors: </p>
                             
                         </div>
                     </footer>
@@ -90,8 +90,8 @@
                                 <li class="">Create S3 static website containing HTML & CSS styled resume</li>
                                 <li class="">Used CloudFront for web security & Route53 for DNS domain name</li>
                                 <li class="">Continuous deployment using GitHub Actions and storing IAM user keys inside GitHub Secrets</li>
-                                <li class="">Will show visit count and store value in DynamoDB using API Gateway and Lambda to communicate with DynamoDB and website</li>
-                                <li class="">Will perform unit testing for my infrastucture as code implementation</li>
+                                <li class="">updates visitor count by using API Gateway which invokes a lambda function to update and pull data from DynamoDB</li>
+                                <li class="">Will perform unit testing for my infrastucture as code implementation using a SAM template to update backend</li>
                             </ul>
                             <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
                             <!-- horizontal row -->
@@ -282,6 +282,10 @@
                                             <div class="align-items-start">
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Python</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">C++</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">C</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">Bash</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">Shell</p></li>
+                                                <li class="list-group-item d-flex"><p class="mb-0 p">Make</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">Javascript</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">HTML</p></li>
                                                 <li class="list-group-item d-flex"><p class="mb-0 p">CSS</p></li>
