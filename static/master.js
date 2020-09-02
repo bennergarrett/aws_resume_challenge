@@ -3,7 +3,7 @@
 function counter() {
   let obj;
   
-  fetch('https://xgjr28nes6.execute-api.us-east-1.amazonaws.com/Prod/%7Bproxy+%7D')
+  fetch('https://db7qhpf6o5.execute-api.us-east-1.amazonaws.com/Prod/{proxy+}')
     .then(res => res.json())
     .then(data => obj = data)
     .then(() => {
