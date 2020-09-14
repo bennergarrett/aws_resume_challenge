@@ -2,13 +2,39 @@
     background-color: #F1FAEE;
 
 } */
- /* .card{
-    background-color:#2EC4B6 ;
-} */
+ .card{
+    /* background-color:#2EC4B6 ; */
+    padding: 1rem;
+    /* width: 100%; */
+    /* text-align: center; */
+    color: whitesmoke;
+    /* background-color: whitesmoke; */
+    box-shadow: 0 5px 5px;
 
-/*.card-body{
-    background-color: #CBF3F0;
-} */
+
+    
+}
+
+li{
+    color:black;
+}
+
+h4{
+    color:black;
+}
+h5{
+    color:black;
+}
+h6{
+    color:black;
+}
+
+
+
+.card-body{
+    /* background-color: #CBF3F0; */
+    /* background-color: whitesmoke; */
+}
 
 .fa-github-square{
     color: #495057;
