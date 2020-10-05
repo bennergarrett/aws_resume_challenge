@@ -10,11 +10,19 @@
     <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
    
 
+    <!-- JQuery -->
+    <script   src="https://code.jquery.com/jquery-3.5.1.js"   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="   crossorigin="anonymous"></script>
 
+
+    <!-- bootsrap scripts -->
+    <!-- <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+    <!-- my script -->
+        <script src="/static/master.js"></script>
     <!-- my css -->
     <link rel="stylesheet" href="/static/master.css">
-
-    
 
     <title>Resume</title>
 </head>
@@ -41,6 +49,7 @@
                         <button type="button" onClick="document.getElementById('education').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list">Education</button>
                         <button type="button" onClick="document.getElementById('certifications').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list">Certifications</button>
                         <button type="button" onClick="document.getElementById('skills').scrollIntoView();" class="btn btn-md list-group-item list-group-item-action" data-toggle="list">Skills</button>
+                        <button type="button" onClick="document.getElementById('contact').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action" data-toggle="list">Contact Me</button>
                         <button type="button" onClick="document.getElementById('blog').scrollIntoView();" class="btn btn-md  list-group-item list-group-item-action disabled" disabled data-toggle="list">Blog</button>
                     </div>
 
@@ -201,7 +210,7 @@
                         </div>
                     </div>
                 </div>
-
+                
 
                 <div class='experience' id='experience'>
                     <div class="card mb-5">
@@ -355,8 +364,46 @@
                     </div>
 
                 </div>
+                
+                <div class='contact' id="contact">
+                    <div class="card mb-5">
+                        <h4 class="card-header text-center">Contact Me</h4>
+                        <div class="card-body">
+                            <div class='media mb-2'>
+                                <!-- <i class="fa fa-university fa-4x text-primary mr-2" ></i> -->
+                                <div class="media-body">
+                                    <form id='contact-form' action="https://db7qhpf6o5.execute-api.us-east-1.amazonaws.com/Prod/{proxy+}" method="post">
+                                        <div class="form-group">
+                                            <label for="name-input">Name</label>
+                                            <input type="text" class="form-control" id="name-input" placeholder="Jane Doe">
+                                          </div>
+                                        <div class="form-group">
+                                          <label for="email-input">Email address</label>
+                                          <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
+                                        </div>
+                                        <div class="form-group">
+                                          <label for="description-input">Message</label>
+                                          <textarea class="form-control" id="description-input" rows="3" placeholder="Enter your message..." required></textarea>
+                                        </div>
+                                        <button id='submitButton' class="btn btn-primary" type="submit" onclick="submitToAPI(event)">Submit</button>
+                                    </form>
 
 
+                                    <!-- <h5 class='h3 mb-1'>Bachelor in Electrical Engineering</h5>
+
+                                    <div class="d-sm-flex justify-content-sm-between align-items-sm-baseline">
+                                        <h6 class="mb-0"><a href="https://engineering.temple.edu">Temple University</a></h6> <small class="d-block text-uppercase font-weight-bold text-muted"><time datetime="2016-08">August 2016</time> &ndash; <time datetime="2020-2">February 2020</time></small>
+                                        
+                                    </div> -->
+        
+                                </div>
+                            </div>
+                            <!-- <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Praesentium architecto optio ipsa possimus deserunt tenetur corrupti, sint consectetur quos quisquam eaque, aut, porro nostrum quibusdam nesciunt! Ea odit similique non.</p> -->
+                            
+                        </div>
+                    </div>
+                </div>    
+                
                 <div class='blog d-none' id="blog">
                     <div class="card mb-5">
                         <h4 class="card-header text-center">Blog</h4>
@@ -380,21 +427,13 @@
                         </div>
 
                 </div>
+            
+            
+            
             </div>
         </div>
      </div>
 
-
-
-
-
-    <!-- bootsrap scripts -->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
-
-    <!-- my script -->
-     <script src="/static/master.js"></script>
     
 </body>
 </html>
