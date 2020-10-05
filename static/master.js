@@ -71,7 +71,7 @@ function submitToAPI(e) {
       // clear form and show a success message
       alert("Sent!");
       document.getElementById("contact-form").reset();
-  location.reload();
+      location.reload();
     },
     error: function () {
       // show an error message
@@ -82,7 +82,7 @@ function submitToAPI(e) {
 
 
 
-// window.onload = counter; //runs on window load
+window.onload = counter; //runs on window load
 // $(document).ready(function() {
 
 
