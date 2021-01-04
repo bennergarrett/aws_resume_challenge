@@ -25,7 +25,6 @@ function counter() {
 function submitToAPI(e) {
   e.preventDefault();
   var URL = "https://www.garrettbenner.com";
-
        let Namere = /[A-Za-z]{1}[A-Za-z]/;
        if (!Namere.test($("#name-input").val())) {
                     alert ("Name can not less than 2 char");
@@ -69,20 +68,22 @@ function submitToAPI(e) {
     
     success: function () {
       // clear form and show a success message
+      //
       alert("Sent!");
       document.getElementById("contact-form").reset();
       location.reload();
     },
     error: function () {
       // show an error message
+      //
       alert("Unsuccessful");
     }});
 }
 
+//runs on window load
+//
+window.onload = counter; 
 
-
-
-window.onload = counter; //runs on window load
 // $(document).ready(function() {
 
 
